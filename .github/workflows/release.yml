@@ -1,0 +1,12 @@
+name: release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: andrewmcodes/github-actions/release-please-simple@main
